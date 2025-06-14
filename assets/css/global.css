@@ -1,4 +1,8 @@
 @charset "utf-8";
+html, body {
+    background-color: #f4f8f2;
+}
+
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;

@@ -18,15 +18,18 @@ body_attr: >-
     background-color: #6096B4;
     color: white;
 }
+.custom-radius {
+    border-radius: 15px;
+}
 </style>
 
 {% assign pubs_by_year = site.publications | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
 
 <div class="row">
     <div class="col-12 col-lg-10">
-        <div class="p-3 mb-3 bg-white shadow-sm rounded">
+        <div class="p-3 mb-3 bg-white shadow-sm custom-radius">
             <span>Representative papers are </span>
-            <span style="background-color: #E4EFE7">highlighted.</span>
+            <span style="background-color: #D2E9E9">highlighted.</span>
         </div>
         {% for year in pubs_by_year %}
         {% assign num_papers = year.items | size %}
@@ -34,7 +37,7 @@ body_attr: >-
             {{ year.name }}
             <img src="{{ '/assets/images/cute_icons/' | append: year.name | append: '.png' | relative_url }}" alt="{{ year.name }}" style="height: 1.6em; width: auto; vertical-align: middle; display: inline-block;">
         </h2>
-        <div class="my-0 p-0 bg-white shadow-sm rounded">
+        <div class="my-0 p-0 bg-white shadow-sm custom-radius">
             {% assign selected_items = year.items | where: "selected", true %}
             {% assign non_selected_items = year.items | where: "selected", false %}
             {% for item in selected_items %}
