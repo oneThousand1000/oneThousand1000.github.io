@@ -1,6 +1,21 @@
+<style>
+  a.follow_href {
+  color: #6096B4;
+}
+
+a.location_href {
+  color: #6096B4;
+  text-decoration: none; 
+}
+
+.custom-radius {
+    border-radius: 15px;
+}
+</style>
+
 <div class="row">
     <div class="col">
-        <div class="card border-0 shadow-sm bg-white">
+        <div class="card border-0 shadow-sm bg-white custom-radius">
             <div class="card-body p-5">
                 <div class="row">
                     <div class="col">
@@ -9,7 +24,7 @@
                         <div class="figure float-right ml-4 mb-4 d-none d-md-block">
                             <img 
                                 src="{{ site.data.profile.portrait_url | relative_url }}" 
-                                class="figure-img img-fluid img-thumbnail" 
+                                class="figure-img img-fluid img-thumbnail rounded-circle shadow" 
                                 style="height: 200px;"
                                 data-toggle="tooltip" 
                                 data-placement="top" 
@@ -20,6 +35,7 @@
                         <div class="d-flex">
                             <div class="h1 font-weight-normal">
                                 {{ site.data.profile.primary_name }} <small>{{ site.data.profile.secondary_name }}</small>
+                                <img src="{{ '/assets/images/cat.png' | relative_url }}" alt="Cat" style="height: 56px; margin-left: 10px; vertical-align: middle;">
                             </div>
                             {% if site.data.profile.portrait_url %}
                             <div class="ml-auto d-md-none">
@@ -49,8 +65,12 @@
                 <hr />
                 <div class="row">
                     <div class="col">
-                        <a class="pr-3 no-break" href="mailto:{{ site.data.profile.email | encode_email }}">
-                            <i class="fas fa-at"></i> <span class="email-text">{{ site.data.profile.email | replace: "@", "(at)" }}</span>
+                        <a class="pr-3 no-break location_href">
+                            <i class="fa fa-fw fa-map-marker"></i> {{site.data.profile.location}} 
+                        </a>
+
+                        <a class="pr-3 no-break follow_href" href="mailto:{{ site.data.profile.email | encode_email }}">
+                            <i class="fas fa-at"></i> {{ site.data.profile.email | replace: "@", "(at)" }} 
                         </a>
 
                         {% if site.data.profile.gscholar %}
@@ -59,38 +79,44 @@
                         {%- else -%}
                         {%- assign gscholar_url = 'https://scholar.google.com/citations?user=' | append: site.data.profile.gscholar -%}
                         {%- endif -%}
-                        <a class="pr-3 no-break" target="_blank" href="{{ gscholar_url }}">
+                        <a class="pr-3 no-break follow_href" target="_blank" href="{{ gscholar_url }}" class="follow_href">
                             <i class="fab fa-google-scholar"></i> Google Scholar
                         </a>
                         {% endif %}
                         
                         {% if site.data.profile.github %}
-                        <a class="pr-3 no-break" target="_blank" href="https://github.com/{{ site.data.profile.github }}">
+                        <a class="pr-3 no-break follow_href" target="_blank" href="https://github.com/{{ site.data.profile.github }}">
                             <i class="fab fa-github"></i> GitHub
                         </a>
                         {% endif %}
 
                         {% if site.data.profile.wechat_qrcode %}
-                        <a class="pr-3 no-break" data-toggle="modal" data-target="#modal-wechat">
+                        <a class="pr-3 no-break follow_href" data-toggle="modal" data-target="#modal-wechat">
                             <i class="fab fa-weixin"></i> WeChat
                         </a>
                         {% endif %}
 
                         {% if site.data.profile.twitter %}
-                        <a class="pr-3 no-break" target="_blank" href="https://twitter.com/{{ site.data.profile.twitter }}">
+                        <a class="pr-3 no-break follow_href" target="_blank" href="https://twitter.com/{{ site.data.profile.twitter }}">
                             <i class="fab fa-twitter"></i> Twitter
                         </a>
                         {% endif %}
 
                         {% if site.data.profile.linkedin %}
-                        <a class="pr-3 no-break" target="_blank" href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}">
+                        <a class="pr-3 no-break follow_href" target="_blank" href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}">
                             <i class="fab fa-linkedin"></i> LinkedIn
                         </a>
                         {% endif %}
 
                         {% if site.data.profile.orcid %}
-                        <a class="pr-3 no-break" target="_blank" href="https://orcid.org/{{ site.data.profile.orcid }}">
+                        <a class="pr-3 no-break follow_href" target="_blank" href="https://orcid.org/{{ site.data.profile.orcid }}">
                             <i class="fab fa-orcid"></i> ORCID
+                        </a>
+                        {% endif %}
+
+                        {% if site.data.profile.bilibili %}
+                        <a class="pr-3 no-break follow_href" target="_blank" href="https://space.bilibili.com/{{ site.data.profile.bilibili }}">
+                            <i class="fas fa-thumbs-up"></i> Bilibili
                         </a>
                         {% endif %}
                     </div>
