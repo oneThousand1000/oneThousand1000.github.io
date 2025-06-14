@@ -20,8 +20,8 @@ a.location_href {
                 <div class="row">
                     <div class="col">
                         {% if site.data.profile.portrait_url %}
-                        <!-- When the screen is wider than md, float the portrait on the right -->
-                        <div class="figure float-right ml-4 mb-4 d-none d-md-block">
+                        <!-- Portrait image for both mobile and desktop -->
+                        <div class="figure float-right ml-4 mb-4">
                             <img 
                                 src="{{ site.data.profile.portrait_url | relative_url }}" 
                                 class="figure-img img-fluid img-thumbnail rounded-circle shadow" 
@@ -37,13 +37,6 @@ a.location_href {
                                 {{ site.data.profile.primary_name }} <small>{{ site.data.profile.secondary_name }}</small>
                                 <img src="{{ '/assets/images/cat.png' | relative_url }}" alt="Cat" style="height: 56px; margin-left: 10px; vertical-align: middle;">
                             </div>
-                            {% if site.data.profile.portrait_url %}
-                            <div class="ml-auto d-md-none">
-                                <a target="_blank" href="{{ site.data.profile.portrait_url | relative_url }}">
-                                    <img src="{{ site.data.profile.portrait_url | relative_url }}" class="rounded-circle" style="height: 48px;" alt="Portrait">
-                                </a>
-                            </div>
-                            {% endif %}
                         </div>
                         <div class="text-profile-position">
                             {% for position in site.data.profile.positions %}
