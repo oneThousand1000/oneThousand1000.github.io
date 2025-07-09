@@ -25,17 +25,4 @@ links:
   Video: http://www.cad.zju.edu.cn/home/jin/sig20231/demo.mp4
   Supplementary: http://www.cad.zju.edu.cn/home/jin/sig20231/Supplementary.pdf
 ---
-
-Recommended citation: 
-```
-@inproceedings{10.1145/3588432.3591493,
-author = {Hu, Jinkai and Yu, Chengzhong and Liu, Hongli and Yan, Lingqi and Wu, Yiqian and Jin, Xiaogang},
-title = {Deep Real-time Volumetric Rendering Using Multi-feature Fusion},
-year = {2023},
-isbn = {9798400701597},
-publisher = {Association for Computing Machinery},
-booktitle = {ACM SIGGRAPH 2023 Conference Proceedings},
-articleno = {61},
-numpages = {10}
-}
-```
+ 

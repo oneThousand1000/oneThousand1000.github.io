@@ -9,7 +9,7 @@ pub_last:       ""
 pub_date:       "2025"
 
 abstract: >-
-  TBD
+  A novel method that integrates unsupervised style from arbitrary references into a text-driven diffusion model to generate semantically consistent stylized human motion.
 
 cover:          /assets/images/publications/Semantically_Consistent_Text-to-Motion.jpeg
 authors:

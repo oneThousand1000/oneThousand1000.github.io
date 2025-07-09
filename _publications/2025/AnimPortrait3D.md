@@ -5,7 +5,7 @@ selected:       true
 pub:            "ACM SIGGRAPH (Conference Track)"
 pub_pre:        ""
 # pub_post:       "Conference Track"
-pub_last:       ""
+pub_last:       ' <span class="badge badge-pill badge-publication" style="background-color: #A19AD3; color: white;">Work done while visiting ETH Zurich</span>'
 pub_date:       "2025"
 
 abstract: >-

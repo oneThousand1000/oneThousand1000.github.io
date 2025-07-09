@@ -21,6 +21,3 @@ authors:
   - Xiaogang Jin
 links: 
 ---
-
-Recommended citation: 
-```
