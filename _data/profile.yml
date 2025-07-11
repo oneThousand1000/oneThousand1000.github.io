@@ -2,12 +2,13 @@ primary_name: "Yiqian Wu"
 # secondary_name: ""
 # navbar_name: "Your Name"
 
-# positions:
-# - logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
-#   name: Position 1 with logo
-# - name: Position 2 without logo
+positions:
+- logo: /assets/images/badges/zju.png  # Logo is optional
+  name: Ph.D. candidate 
+# - logo: /assets/images/badges/meta.jpg   # Logo is optional
+#   name: Intern at the Codec Avatars Lab, Meta
 
-location: Hangzhou, China
+location: Pittsburgh, US
 email: "onethousand1250@gmail.com"
 # cv_link: link-to-your-cv-file
 gscholar: MzWL6_gAAAAJ  # This is an example, replace it with your own Google Scholar ID
@@ -24,11 +25,19 @@ short_bio_text_justify: false
 short_bio: >-
   <p>I am Yiqian Wu (吴奕谦), a fourth-year CS Ph.D. candidate at the <a href="http://www.cad.zju.edu.cn" class="profile_href">State Key Laboratory of CAD&amp;CG</a>, 
   Zhejiang University, where I have been conducting research under the supervision of Prof. <a href="http://www.cad.zju.edu.cn/home/jin" class="profile_href">Xiaogang Jin</a> 
-  since 2021. From May 2024 to April 2025, I was an academic guest at <a href="https://ethz.ch/en.html" class="profile_href">ETH Zurich</a>, collaborating with 
+  since 2021. I am currently a research intern at the <a href="https://about.meta.com/realitylabs/codecavatars/"  class="profile_href">Codec Avatars Lab, Meta</a>, working with <a href="https://junxuan-li.github.io/"  class="profile_href">Junxuan Li</a>.
+  </p>
+  <p>
+  From May 2024 to April 2025, I was an academic guest at <a href="https://ethz.ch/en.html" class="profile_href">ETH Zurich</a>, collaborating with 
   Prof. <a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html" class="profile_href">Siyu Tang</a>. I received my B.S. degree in Computer Science and Technology 
   from the Chu Kochen College at Zhejiang University in 2021.</p>
 
-portrait_url: /assets/images/photos/profile-yiqian.png
+  <p> <b>Also known as</b>: A lazy and amateur painter.
+  </p>
+
+portrait_url: /assets/images/photos/profile-yiqian.png 
+portrait_url_var1: /assets/images/photos/profile-yiqian-var1.png
+
 # portrait_caption: >-
 #   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
@@ -46,7 +55,12 @@ education:
   position: B.S. in Computer Science
   date: Sep. 2017 - Jun. 2021
 
-experience: 
+experience:
+- name: Codec Avatars Lab, Meta
+  logo: /assets/images/badges/meta.jpg 
+  position:  >- 
+    Research Scientist Intern
+  date: Jun. 2025 - Dec. 2025
 - name: ETH Zürich
   logo: /assets/images/badges/eth.png
   logo2: /assets/images/badges/logo-vlg-text.png

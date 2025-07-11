@@ -11,6 +11,17 @@ a.location_href {
 .custom-radius {
     border-radius: 15px;
 }
+
+.profile-portrait {
+    transition: opacity 0.2s ease-in-out;
+}
+
+.profile-portrait.hover {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 </style>
 
 <div class="row">
@@ -21,14 +32,27 @@ a.location_href {
                     <div class="col">
                         {% if site.data.profile.portrait_url %}
                         <!-- Portrait image for both mobile and desktop -->
-                        <div class="figure float-right ml-4 mb-4">
+                        <div class="figure float-right ml-4 mb-4 position-relative">
                             <img 
                                 src="{{ site.data.profile.portrait_url | relative_url }}" 
-                                class="figure-img img-fluid img-thumbnail rounded-circle shadow-sm" 
+                                class="figure-img img-fluid img-thumbnail rounded-circle shadow profile-portrait" 
                                 style="height: 200px;"
                                 data-toggle="tooltip" 
                                 data-placement="top" 
                                 title="{{ site.data.profile.portrait_caption }}">
+                            {% if site.data.profile.portrait_url_var1 %}
+                            <img 
+                                src="{{ site.data.profile.portrait_url_var1 | relative_url }}" 
+                                class="figure-img img-fluid img-thumbnail rounded-circle shadow profile-portrait hover" 
+                                style="height: 200px;"
+                                data-toggle="tooltip" 
+                                data-placement="top" 
+                                title="{{ site.data.profile.portrait_caption }}">
+                            {% endif %}
+                            <figcaption class="figure-caption text-center" style="font-size: 0.8em; color: #BAD8B6;">
+                                <span class="default-caption">📷Photography by Anqiao</span>
+                                <span class="hover-caption" style="display: none;">🖌️Painting by Yiqian</span>
+                            </figcaption>
                         </div>
                         {% endif %}
 
@@ -138,3 +162,26 @@ a.location_href {
     </div>
 </div>
 {% endif %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const portraitContainer = document.querySelector('.figure');
+    const hoverImage = document.querySelector('.profile-portrait.hover');
+    const defaultCaption = document.querySelector('.default-caption');
+    const hoverCaption = document.querySelector('.hover-caption');
+    
+    if (portraitContainer && hoverImage) {
+        portraitContainer.addEventListener('mouseenter', function() {
+            hoverImage.style.opacity = '1';
+            defaultCaption.style.display = 'none';
+            hoverCaption.style.display = 'inline';
+        });
+
+        portraitContainer.addEventListener('mouseleave', function() {
+            hoverImage.style.opacity = '0';
+            defaultCaption.style.display = 'inline';
+            hoverCaption.style.display = 'none';
+        });
+    }
+});
+</script>

@@ -1,6 +1,6 @@
 ---
 title:          "3DPortraitGAN: Learning Canonical Full-Head 3D GANs from a Single-View Portrait Dataset with Diverse Body Poses"
-date:           2023-08-22 00:00:00 +0800
+date:           2025-03-01 00:00:00 +0800
 selected:       true
 pub:            "IEEE Transactions on Circuits and Systems for Video Technology"
 # pub_post:       'Under review'
