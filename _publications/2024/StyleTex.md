@@ -21,7 +21,8 @@ authors:
   - Gongsheng Li
   - Xiaogang Jin
 links:
-  Paper: http://www.cad.zju.edu.cn/home/jin/SigA20242/StyleTex.pdf
+  Paper: https://dl.acm.org/doi/10.1145/3687931
+  Arxiv: https://arxiv.org/abs/2411.00399
   Video: http://www.cad.zju.edu.cn/home/jin/SigA20242/demo.mp4
   Project: http://www.cad.zju.edu.cn/home/jin/SigA20242/StyleTex.htm
   Code: https://github.com/XZYW7/StyleTex

@@ -20,7 +20,7 @@ authors:
   - Marc Pollefeys
   - Siyu Tang
 links:
-  Paper: https://www.arxiv.org/abs/2506.07886
+  Arxiv: https://www.arxiv.org/abs/2506.07886
   Project: https://egom2p.github.io/
   Code: https://github.com/ligengen/EgoM2P
 --- 

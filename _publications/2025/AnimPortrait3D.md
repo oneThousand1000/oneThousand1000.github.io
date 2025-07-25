@@ -18,7 +18,8 @@ authors:
   - Xiaogang Jin
   - Siyu Tang
 links:
-  Paper: https://arxiv.org/abs/2504.15835
+  Paper: https://dl.acm.org/doi/abs/10.1145/3721238.3730680 
+  Arxiv: https://arxiv.org/abs/2504.15835
   Video: https://youtu.be/UgNcuUKAc7A
   Project: https://onethousandwu.com/animportrait3d.github.io/
   Code: https://github.com/oneThousand1000/AnimPortrait3D

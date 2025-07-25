@@ -20,6 +20,7 @@ authors:
   - Xiaogang Jin
 links:
   Paper: http://www.cad.zju.edu.cn/home/jin/EnhancingAuthenticity2023/EnhancingAuthenticity.pdf
+  Arxiv: https://arxiv.org/abs/2310.04194
   Video: http://www.cad.zju.edu.cn/home/jin/EnhancingAuthenticity2023/demo.mp4
   Project: http://www.cad.zju.edu.cn/home/jin/EnhancingAuthenticity2023/EnhancingAuthenticity.htm
 --- 

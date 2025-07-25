@@ -22,7 +22,8 @@ authors:
   - Chen Li
   - Xiaogang Jin
 links:
-  Paper: https://arxiv.org/abs/2404.10394
+  Paper: https://dl.acm.org/doi/10.1145/3658162
+  Arxiv: https://arxiv.org/abs/2404.10394
   Video: https://youtu.be/z7xWiD1p1_4
   Project: https://onethousandwu.com/portrait3d.github.io/
   Code: https://github.com/oneThousand1000/Portrait3D

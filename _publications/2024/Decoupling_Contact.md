@@ -24,7 +24,8 @@ authors:
   - Qilong Kou
   - Xiaogang Jin
 links:
-  Paper: http://www.cad.zju.edu.cn/home/jin/SigA20241/High_quality_Controllable_Motion_Style_Transfer.pdf
+  Paper: https://dl.acm.org/doi/10.1145/3680528.3687609
+  Arxiv: https://arxiv.org/abs/2409.05387
   Video: http://www.cad.zju.edu.cn/home/jin/SigA20241/demo.mp4
   Project: http://www.cad.zju.edu.cn/home/jin/SigA20241/Decoupling_Contact.htm
   Supplementary: http://www.cad.zju.edu.cn/home/jin/SigA20241/supplemental_material.pdf
