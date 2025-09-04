@@ -7,7 +7,7 @@ pub_pre:        ""
 # pub_post:       "Journal Track"
 pub_last:       ""
 pub_date:       "2021"
-
+pub_ab:         "SIGGRAPH Asia"
 abstract: >-
   The first eyelash matting dataset which contains 5,400 high-quality eyelash matting data captured from real world and 5,272 virtual eyelash matting data created by rendering avatars.  
 

@@ -5,6 +5,7 @@ selected:       true
 pub:            "IEEE Transactions on Circuits and Systems for Video Technology"
 # pub_post:       'Under review'
 pub_date:       "2025"
+pub_ab:         "TCSVT"
 
 abstract: >-
   The first 3D-aware one-quarter headshot portrait generator that learns a canonical 3D avatar distribution from the 360°PHQ dataset with body pose self-learning. 

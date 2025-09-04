@@ -7,7 +7,7 @@ pub_pre:        ""
 # pub_post:       "Conference Track"
 pub_last:       ""
 pub_date:       "2022"
-
+pub_ab:         "CVPR"
 abstract: >-
   A dataset and a baseline method for removing hair from portrait images using generative adversarial networks (GANs).  
 cover:          /assets/images/publications/hairmapper.png

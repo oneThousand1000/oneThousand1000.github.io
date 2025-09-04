@@ -7,7 +7,7 @@ pub_pre:        ""
 # pub_post:       "Conference Track"
 pub_last:       ""
 pub_date:       "2025"
-
+pub_ab:         "SIGGRAPH"
 abstract: >-
   A novel method that integrates unsupervised style from arbitrary references into a text-driven diffusion model to generate semantically consistent stylized human motion.
 
@@ -25,6 +25,6 @@ authors:
   - Chen Liu
   - Xiaogang Jin
 links:
-  Paper: https://dl.acm.org/doi/10.1145/3721238.3730641
+  Paper: https://dl.acm.org/doi/10.1145/3721238.3730641 
   Project: https://fivezerojun.github.io/stylization.github.io/
 --- 

@@ -7,7 +7,7 @@ pub_pre:        ""
 # pub_post:       "Conference Tracks"
 pub_last:       ""
 pub_date:       "2024"
-
+pub_ab:         "SIGGRAPH Asia"
 abstract: >-
   A novel style transfer method for fine-grained control over contacts while achieving both motion naturalness and spatial temporal variations of style.  
 

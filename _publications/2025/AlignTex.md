@@ -5,7 +5,7 @@ selected:       false
 pub:            "ACM Transactions on Graphics (Proceedings of SIGGRAPH)" 
 pub_last:       ""
 pub_date:       "2025"
-
+pub_ab:         "SIGGRAPH"
 abstract: >-
   A novel framework for pixel-precise texture generation from multi-view artwork.  
 

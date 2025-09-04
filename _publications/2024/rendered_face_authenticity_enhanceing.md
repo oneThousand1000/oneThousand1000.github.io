@@ -7,7 +7,7 @@ pub:            "Computer Animation and Virtual Worlds"
 # pub_post:       "CASA'2024"
 # pub_last:       " (Wiley, 2024, 35(3-4))"
 pub_date:       "2024"
-
+pub_ab:         "CAVW"
 abstract: >-
   A novel photo-realistic portrait generation framework that can effectively mitigate the "uncanny valley" effect and improve the overall authenticity of rendered portraits.
 

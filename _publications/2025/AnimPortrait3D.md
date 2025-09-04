@@ -7,7 +7,7 @@ pub_pre:        ""
 # pub_post:       "Conference Track"
 pub_last:       ' <span class="badge badge-pill badge-publication" style="background-color: #A19AD3; color: white;">Work done while visiting ETH Zurich</span>'
 pub_date:       "2025"
-
+pub_ab:         "SIGGRAPH"
 abstract: >-
   A novel framework, AnimPortrait3D, for text-based realistic animatable 3DGS avatar generation with morphable model alignment.
 

@@ -7,7 +7,7 @@ pub_pre:        ""
 # pub_post:       "Conference Track"
 pub_last:       ""
 pub_date:       "2025"
-
+pub_ab:         "ICCV"
 abstract: >-
   A masked modeling framework that learns from temporally-aware multimodal tokens to train a large, general-purpose model for egocentric 4D understanding.
 

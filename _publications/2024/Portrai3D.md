@@ -7,7 +7,7 @@ pub_pre:        ""
 # pub_post:       "Journal Track"
 pub_last:       ""
 pub_date:       "2024"
-
+pub_ab:         "SIGGRAPH"
 abstract: >-
   A novel neural rendering-based framework with a novel joint geometry-appearance prior to achieve text-to-3D-portrait generation.
 

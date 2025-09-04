@@ -15,16 +15,37 @@
     background-color: #D2E9E9;
   }
   
+  .pub-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: #78B9B5;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.7em;
+    font-weight: bold;
+    z-index: 10;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .publication-container {
+    position: relative;
+  }
+  
 </style>
 
 
 <div class="d-none d-md-block">
     <div class="row no-gutters {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray {% if item.selected and page.path contains 'publications' %}selected-publication{% endif %}">
-        <div class="col-md-4 col-xl-3 mb-md-0 p-md-3 d-flex align-items-start">
+        <div class="col-md-4 col-xl-3 mb-md-0 p-md-3 d-flex align-items-start publication-container">
             {%- if item.cover -%}
             <img data-src="{{ item.cover | relative_url }}" alt="{{ item.title }}" class="lazy publication-cover rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
             {%- else -%}
             <svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="{{ item.id }}" viewBox="0 0 300 200"></svg>
+            {%- endif -%}
+            {%- if item.pub_ab -%}
+            <div class="pub-badge">{{ item.pub_ab }}</div>
             {%- endif -%}
         </div>
         <div class="col-md-8 col-xl-9 p-3 pl-md-0">
@@ -49,7 +70,7 @@
 
 <div class="row no-gutters d-md-none {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray {% if include.first %}rounded-top{% endif %} {% if include.last %}rounded-bottom{% endif %} {% if item.cover %}lazy{% endif %} {% if item.selected and page.path contains 'publications' %}selected-publication{% endif %}" data-src="{{ item.cover | relative_url }}">
     <div class="w-100" style="background-color: rgba(255,255,255,0.9);">
-        <div class="d-flex align-items-start flex-column py-3 px-4">
+        <div class="d-flex align-items-start flex-column py-3 px-4 publication-container">
             <div class="mb-auto"></div>
             <div>
                 <h5 class="mt-0 mb-0 font-weight-normal" style="color: #808D7C;">{{ item.title }}</h5>
@@ -67,6 +88,9 @@
                     {% endfor %}
                 </p>
             </div>
+            {%- if item.pub_ab -%}
+            <div class="pub-badge">{{ item.pub_ab }}</div>
+            {%- endif -%}
         </div>
     </div>
 

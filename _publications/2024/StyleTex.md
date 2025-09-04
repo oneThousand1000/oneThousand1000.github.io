@@ -7,7 +7,7 @@ pub_pre:        ""
 # pub_post:       "Conference Track"
 pub_last:       ""
 pub_date:       "2024"
-
+pub_ab:         "SIGGRAPH Asia"
 abstract: >-
   An innovative diffusion-model-based framework for creating stylized textures for 3D models. 
 

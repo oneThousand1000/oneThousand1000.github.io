@@ -7,7 +7,7 @@ pub_pre:        ""
 # pub_post:       "Journal Track"
 pub_last:       ""
 pub_date:       "2021"
-
+pub_ab:         "SIGGRAPH"
 abstract: >-
   A novel method that can automatically remove the double chin effect in portrait images. 
 

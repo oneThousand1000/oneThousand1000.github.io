@@ -7,7 +7,7 @@ pub:            "The Visual Computer"
 # pub_post:       ""
 # pub_last:       "Springer, 2024, 39(9-11)"
 pub_date:       "2024"
-
+pub_ab:         "VC"
 abstract: >-
   A novel automatic text-guided mesh deformation method that leverages diffusion models. 
 

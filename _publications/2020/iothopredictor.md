@@ -7,7 +7,7 @@ pub:            "ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia)"
 # pub_post:       "Journal Track"
 # pub_last:       ""
 pub_date:       "2020"
-
+pub_ab:         "SIGGRAPH Asia"
 abstract: >-
   A novel system to visually predict teeth alignment in photographs.  
 

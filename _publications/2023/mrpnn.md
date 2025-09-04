@@ -7,7 +7,7 @@ pub_pre:        ""
 # pub_post:       "Conference Track"
 pub_last:       ""
 pub_date:       "2023"
-
+pub_ab:         "SIGGRAPH"
 abstract: >-
   A practical framework with a lightweight feature fusion neural network for rendering high-order scattered radiance of participating media in real time.  
 cover:          /assets/images/publications/mrpnn.png
