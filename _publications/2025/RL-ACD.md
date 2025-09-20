@@ -2,7 +2,7 @@
 title:          "RL-ACD: Reinforcement Learning-based Approximate Convex Decomposition"
 date:           2025-08-31 00:00:00 +0800
 selected:       false
-pub:            "ACM SIGGRAPH Asia (Conference Track)" 
+pub:            "ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia)" 
 pub_last:       ""
 pub_date:       "2025"
 pub_ab:         "SIGGRAPH Asia"
