@@ -24,4 +24,5 @@ authors:
   - Yanpei Cao
   - Xiaogang Jin
 links: 
+  Project: https://xh38.github.io/LegoACE/
 ---
