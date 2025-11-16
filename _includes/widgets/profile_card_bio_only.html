@@ -1,0 +1,41 @@
+<style>
+  a.follow_href {
+  color: #6096B4;
+}
+
+a.location_href {
+  color: #6096B4;
+  text-decoration: none; 
+}
+
+.custom-radius {
+    border-radius: 15px;
+}
+</style>
+
+<div class="mt-3 d-md-none"></div>
+<div class="row">
+    <div class="col">
+        <div class="card border-0 shadow-sm bg-white custom-radius">
+            <div class="card-body p-4">
+                <div class="row px-3 pt-3">
+                    <div class="col h3 d-flex align-items-center">
+                        About Me
+                        <img src="{{ '/assets/images/cat.png' | relative_url }}" alt="Cat" style="height: 56px; margin-left: 10px; vertical-align: middle;">
+                    </div>
+                </div>
+                <div class="row p-3">
+                    <div class="col">
+                        <div class="text-profile-bio mt-0" {% if site.data.profile.short_bio_text_justify %}style="text-align: justify;"{% endif %}>
+                            {{ site.data.profile.short_bio }}
+                        </div>
+                        {% if site.data.profile.cv_link %}
+                            <a class="follow_href" target="_blank" href="{{ site.data.profile.cv_link | relative_url }}"><i class="fas fa-file-alt"></i> Curriculum Vitae</a> <br/>
+                        {% endif %}
+                    </div>
+        
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
