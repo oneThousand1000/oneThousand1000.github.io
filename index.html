@@ -20,6 +20,7 @@ navbar_title: Home
             {% include widgets/experience_card.html %}
         {% endif %}
 
+        {% include widgets/research_overview.html %}
 
         {% if site.data.display.homepage.show_selected_publications %}
         {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
