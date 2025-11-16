@@ -16,7 +16,7 @@
 {% assign publications = include.publications %}
 <div class="my-3 p-0 bg-white shadow-sm custom-radius">
     <h6 class="border-bottom border-gray p-3 mb-0">
-        {% if include.title %}{{ include.title }}{% else %}<img src="{{ '/assets/images/cute_icons/2b50.png' | relative_url }}" alt="Star" style="height: 1.6em; width: auto; vertical-align: middle; display: inline-block;"> Selected Recent Publications{% endif %} 
+        {% if include.title %}{{ include.title }}{% else %}<img src="{{ '/assets/images/cute_icons/2b50.png' | relative_url }}" alt="Star" style="height: 1.6em; width: auto; vertical-align: middle; display: inline-block;"> Selected Publications{% endif %} 
         <a href="{{ 'publications' | relative_url }}" class="pub-link">(view all <i class="fas fa-angle-double-right"></i>)</a>
     </h6>
     {% for item in publications limit:include.limit %}
