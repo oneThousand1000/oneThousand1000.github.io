@@ -1,5 +1,10 @@
 {% assign item = include.item %}
-
+{% assign project_link = nil %}
+{% for link in item.links %}
+  {% if link[0] == "Project" %}
+    {% assign project_link = link[1].url | default: link[1] %}
+  {% endif %}
+{% endfor %}
 <style>
     a.item_link {
     color: #748E63;
@@ -49,7 +54,13 @@
             {%- endif -%}
         </div>
         <div class="col-md-8 col-xl-9 p-3 pl-md-0">
-            <h5 class="mt-0 mb-0 font-weight-normal" style="color: #808D7C;">{{ item.title }}</h5>
+            <h5 class="mt-0 mb-0 font-weight-normal" style="color: #808D7C;">
+              {% if project_link %}
+                <a href="{{ project_link }}" class="item_link" target="_blank">{{ item.title }}</a>
+              {% else %}
+                {{ item.title }}
+              {% endif %}
+            </h5>
             <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
             <p class="mt-0 mb-0 small ">{{item.pub_pre}}<i><b>{{ item.pub }}</b></i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}</p>
             <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
@@ -73,9 +84,15 @@
         <div class="d-flex align-items-start flex-column py-3 px-4 publication-container">
             <div class="mb-auto"></div>
             <div>
-                <h5 class="mt-0 mb-0 font-weight-normal" style="color: #808D7C;">{{ item.title }}</h5>
+                <h5 class="mt-0 mb-0 font-weight-normal" style="color: #808D7C;">
+                  {% if project_link %}
+                    <a href="{{ project_link }}" class="item_link" target="_blank">{{ item.title }}</a>
+                  {% else %}
+                    {{ item.title }}
+                  {% endif %}
+                </h5>
                 <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
-                <p class="mt-0 mb-0 small">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}</p>
+                <p class="mt-0 mb-0 small>{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}</p>
                 <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
                 
                 <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
