@@ -31,7 +31,7 @@ a.location_href {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
-
+/* 
 .profile-portrait-container:hover .profile-portrait.hover {
     opacity: 1;
 }
@@ -42,7 +42,7 @@ a.location_href {
 
 .profile-portrait-container .profile-portrait:not(.hover) {
     transition: opacity 0.3s ease-in-out;
-}
+} */
 </style>
 
 <div class="row sticky-top" style="top: 80px">
@@ -62,7 +62,7 @@ a.location_href {
                                     data-toggle="tooltip" 
                                     data-placement="top" 
                                     title="{{ site.data.profile.portrait_caption }}">
-                                {% if site.data.profile.portrait_url_var1 %}
+                                <!-- {% if site.data.profile.portrait_url_var1 %}
                                 <img 
                                     src="{{ site.data.profile.portrait_url_var1 | relative_url }}" 
                                     class="figure-img img-fluid img-thumbnail rounded-circle shadow profile-portrait hover" 
@@ -70,7 +70,7 @@ a.location_href {
                                     data-toggle="tooltip" 
                                     data-placement="top" 
                                     title="{{ site.data.profile.portrait_caption }}">
-                                {% endif %}
+                                {% endif %} -->
                             </div>
                         </div>
                         {% endif %}
