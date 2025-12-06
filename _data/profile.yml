@@ -4,12 +4,12 @@ primary_name: "Yiqian Wu"
 
 positions:
 - logo: /assets/images/badges/zju.png  # Logo is optional
-  name: Ph.D. candidate 
+  name: Ph.D. candidate <br/> @ Zhejiang University
 # - logo: /assets/images/badges/meta.jpg   # Logo is optional
 #   name: Intern at the Codec Avatars Lab, Meta
 
-location: Pittsburgh, US
-email: "onethousand1250@gmail.com"
+location: Hangzhou, China
+email: "yiqian.wu.1k@gmail.com"
 # cv_link: link-to-your-cv-file
 gscholar: MzWL6_gAAAAJ  # This is an example, replace it with your own Google Scholar ID
 github: oneThousand1000
@@ -25,9 +25,10 @@ short_bio_text_justify: false
 short_bio: >-
   <p>I am Yiqian Wu (吴奕谦), a final-year CS Ph.D. candidate at the <a href="http://www.cad.zju.edu.cn" class="profile_href">State Key Laboratory of CAD&amp;CG</a>, 
   Zhejiang University, where I have been conducting research under the supervision of Prof. <a href="http://www.cad.zju.edu.cn/home/jin" class="profile_href">Xiaogang Jin</a> 
-  since 2021. I am currently a research intern at the <a href="https://about.meta.com/realitylabs/codecavatars/"  class="profile_href">Codec Avatars Lab, Meta</a>, working with <a href="https://junxuan-li.github.io/"  class="profile_href">Junxuan Li</a>.
+  since 2021. 
   </p>
   <p>
+  From June 2025 to Dec. 2025, I did my internship at the <a href="https://about.meta.0000.com/realitylabs/codecavatars/"  class="profile_href">Codec Avatars Lab, Meta</a>, working with <a href="https://junxuan-li.github.io/"  class="profile_href">Junxuan Li</a>.
   From May 2024 to April 2025, I was an academic guest at <a href="https://ethz.ch/en.html" class="profile_href">ETH Zurich</a>, collaborating with 
   Prof. <a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html" class="profile_href">Siyu Tang</a>. I received my B.S. degree in Computer Science and Technology 
   from the Chu Kochen College at Zhejiang University in 2021.</p>
@@ -48,7 +49,7 @@ education:
   position: >- 
     State Key Lab of CAD&CG <br/>
     Ph.D. Student
-  date: Sep. 2021 - present
+  date: Sep. 2021 - Present
 - name: Zhejiang University
   logo: /assets/images/badges/zju.png
   logo2: /assets/images/badges/ckc.png
@@ -65,7 +66,7 @@ experience:
   logo: /assets/images/badges/eth.png
   logo2: /assets/images/badges/logo-vlg-text.png
   position:  >- 
-    Computer Vision and Learning Group (VLG) <br/>
+    Computer Vision and Learning Group <br/>
     Academic Guest
   date: May. 2024 - April. 2025
 
