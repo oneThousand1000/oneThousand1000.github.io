@@ -24,6 +24,23 @@ a.location_href {
     display: inline-block;
 }
 
+/* New: responsive square avatar container to avoid image stretching */
+.avatar-container {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.avatar-container .avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .profile-portrait-container .profile-portrait.hover {
     position: absolute;
     top: 0;
@@ -54,11 +71,10 @@ a.location_href {
                         {% if site.data.profile.portrait_url %}
                         <!-- Portrait image for both mobile and desktop -->
                         <div class="figure">
-                            <div class="profile-portrait-container">
+                            <div class="profile-portrait-container avatar-container">
                                 <img 
                                     src="{{ site.data.profile.portrait_url | relative_url }}" 
-                                    class="figure-img img-fluid img-thumbnail rounded-circle shadow profile-portrait" 
-                                    style="height: 200px;"
+                                    class="figure-img img-fluid img-thumbnail rounded-circle shadow profile-portrait avatar-img" 
                                     data-toggle="tooltip" 
                                     data-placement="top" 
                                     title="{{ site.data.profile.portrait_caption }}">
