@@ -1,10 +1,53 @@
 @charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap");
+
+:root {
+    --color-accent: #7fa185;
+    --color-accent-hover: #359466;
+    --color-link-card: #98A8F8;
+    --color-pub-title: #808D7C;
+    --color-pub-item-link: #748E63;
+    --color-terminal-accent: #ffaaaa;
+    --color-terminal-fg-dim: #ffffff;
+    --color-page-bg: #f6f8fa;
+    --color-text: #24292e;
+    --color-highlight-bg: #eff4ed;
+    --color-nav-active-text: #ffffff;
+    --color-navbar-bg: #525957;
+    --font-family-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    --sticky-below-nav: 80px;
+    --shadow-publication-cover: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-pub-badge: 0 1px 3px rgba(0, 0, 0, 0.2);
+    --pub-mobile-overlay: rgba(255, 255, 255, 0.9);
+}
+
+/* Publications page: year sidebar (scrollspy). */
+.publications-year-nav.nav-pills .nav-link {
+    color: var(--color-accent);
+}
+.publications-year-nav.nav-pills .nav-link:hover {
+    color: var(--color-accent);
+    opacity: 0.8;
+}
+.publications-year-nav.nav-pills .nav-link.active {
+    background-color: var(--color-accent);
+    color: var(--color-nav-active-text);
+}
+
+/* Bold author name on papers (see author_list.html). */
+.pub-author-emph {
+    color: var(--color-accent);
+}
+
 html, body {
-    background-color: #f4f8f2;
+    background-color: var(--color-page-bg);
 }
 
 body {
-    font-family: "Lato", sans-serif;
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--color-text);
     font-weight: 400;
     padding-top: 5.0rem;
 }
@@ -19,12 +62,20 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .text-profile-bio {
-    /* font-family: "Raleway"; */
     font-weight: 400;
 }
 
+.text-profile-bio--justify {
+    text-align: justify;
+}
+
 .navbar {
+    background-color: var(--color-navbar-bg);
     opacity: 0.95;
+}
+
+.card {
+    border-radius: 8px;
 }
 
 .inline-badge {
@@ -68,41 +119,193 @@ div.lazy {
 }
 
 .email-text {
-    font-family: Courier, monospace;
+    font-family: var(--font-family-monospace);
+    color: var(--color-accent);
+}
+
+/* Profile sidebar email + social icons (class also used for CV link in bio card). */
+a.follow_href {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a.follow_href:hover,
+a.follow_href:focus {
+    color: var(--color-accent-hover);
+    text-decoration: none;
+}
+
+a.location_href {
+    color: var(--color-accent);
+    text-decoration: none;
 }
 
 a.profile_href {
-  color: #40A578;
+    color: var(--color-accent);
 }
 
+/* Default nav + brand on dark navbar (Bootstrap navbar-light would otherwise be near-black). */
+.navbar-light .navbar-nav .nav-link {
+    color: var(--color-accent);
+}
+
+.navbar-light .navbar-nav .nav-item.active .nav-link,
 .navbar .nav-item.active .nav-link {
-  color: #40A578;
-  font-weight: 500;
+    color: var(--color-nav-active-text);
+    font-weight: 600;
 }
 
-.terminal-text { 
-  color: #40A578;
-  margin-right: 1.5rem;
-  padding-left: 0;
-  display: inline-flex;
-  align-items: center;
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand strong {
+    color: var(--color-accent);
+}
+
+.terminal-text {
+    color: var(--color-accent);
+    margin-right: 1.5rem;
+    padding-left: 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.terminal-zju {
+    color: var(--color-terminal-accent);
+}
+
+.terminal-dim {
+    color: var(--color-terminal-fg-dim);
+}
+
+.navbar-toggler-compact {
+    font-size: 1em;
+    padding: 0.5em;
 }
 
 .terminal-cursor {
-  display: inline-block;
-  width: 2px;
-  height: 1em;
-  background-color: #FFAAAA;
-  margin-left: 2px;
-  animation: blink 1s step-end infinite;
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: var(--color-terminal-accent);
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
 }
 
 @keyframes blink {
-  from, to {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
+    from, to {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }
- 
+
+/* -------------------------------------------------------------------------- */
+/* Publication list (_includes/widgets/publication_item.html)                */
+/* -------------------------------------------------------------------------- */
+
+a.item_link {
+    color: var(--color-pub-item-link);
+}
+
+.publication-cover {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 200px;
+    box-shadow: var(--shadow-publication-cover);
+}
+
+.selected-publication {
+    background-color: var(--color-highlight-bg);
+}
+
+.pub-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: var(--color-accent);
+    color: var(--color-nav-active-text);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.7em;
+    font-weight: bold;
+    z-index: 10;
+    box-shadow: var(--shadow-pub-badge);
+}
+
+.publication-container {
+    position: relative;
+}
+
+.pub-item-title {
+    color: var(--color-pub-title);
+}
+
+.pub-mobile-overlay {
+    background-color: var(--pub-mobile-overlay);
+}
+
+/* Legend: “highlighted” on publications page + matching row background */
+.text-highlight-bg {
+    background-color: var(--color-highlight-bg);
+}
+
+/* Card header “view all” links (publication_card, research_overview) */
+.pub-link {
+    color: var(--color-link-card);
+}
+
+.pub-link:hover {
+    color: var(--color-link-card);
+    opacity: 0.85;
+    text-decoration: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Profile sidebar (_includes/widgets/profile_card_mini.html)               */
+/* -------------------------------------------------------------------------- */
+
+.sticky-below-navbar {
+    top: var(--sticky-below-nav);
+}
+
+.profile-portrait-container {
+    position: relative;
+    display: inline-block;
+}
+
+.avatar-container {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.avatar-container .avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.profile-portrait-container .profile-portrait.hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.position-inline-logo {
+    max-height: 1.2em;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* Education / experience logos (_includes/widgets/experience_card.html) */
+.experience-inline-logo {
+    height: 24px;
+    width: auto;
+}

@@ -1,29 +1,13 @@
-<style>
-.pub-link {
-    color: #98A8F8;
-}
-
-.view-all-link {
-    color: #98A8F8;
-}
-
-.custom-radius {
-    border-radius: 15px;
-}
-</style>
-
-
 {% assign publications = include.publications %}
-<div class="my-3 p-0 bg-white shadow-sm custom-radius">
-    <h5 class="border-bottom border-gray p-3 mb-0">
-        {% if include.title %}{{ include.title }}{% else %}Selected Publications{% endif %} 
+<div class="card my-3 p-0 bg-white border-0 shadow-sm">
+    <h6 class="border-bottom border-gray p-3 mb-0">
+        {% if include.title %}{{ include.title }}{% else %}Selected Publications{% endif %}
         <a href="{{ 'publications' | relative_url }}" class="pub-link">(view all <i class="fas fa-angle-double-right"></i>)</a>
-    </h5>
+    </h6>
     {% for item in publications limit:include.limit %}
-        {% include widgets/publication_item.html item=item first=false last=false %}    
+        {% include widgets/publication_item.html item=item first=forloop.first last=forloop.last %}
     {% endfor %}
     <h6 class="d-block p-3 mt-0 text-right">
         <a href="{{ 'publications' | relative_url }}" class="pub-link">All publications <i class="fas fa-angle-double-right"></i></a>
     </h6>
 </div>
-

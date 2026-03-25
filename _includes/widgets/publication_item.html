@@ -5,44 +5,10 @@
     {% assign project_link = link[1].url | default: link[1] %}
   {% endif %}
 {% endfor %}
-<style>
-    a.item_link {
-    color: #748E63;
-  }
-  
-  .publication-cover {
-    object-fit: contain;
-    max-width: 100%;
-    max-height: 200px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  .selected-publication {
-    background-color: #D2E9E9;
-  }
-  
-  .pub-badge {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    background-color: #78B9B5;
-    color: white;
-    padding: 2px 8px;
-    border-radius: 12px;
-    font-size: 0.7em;
-    font-weight: bold;
-    z-index: 10;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  }
-  
-  .publication-container {
-    position: relative;
-  }
-  
-</style>
 
 
 <div class="d-none d-md-block">
-    <div class="row no-gutters {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray {% if item.selected and page.path contains 'publications' %}selected-publication{% endif %}">
+    <div class="row no-gutters {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray {% if include.first %}rounded-top{% endif %} {% if include.last %}rounded-bottom{% endif %} {% if item.selected and page.path contains 'publications' %}selected-publication{% endif %}">
         <div class="col-md-4 col-xl-3 mb-md-0 p-md-3 d-flex align-items-start publication-container">
             {%- if item.cover -%}
             <img data-src="{{ item.cover | relative_url }}" alt="{{ item.title }}" class="lazy publication-cover rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
@@ -54,7 +20,7 @@
             {%- endif -%}
         </div>
         <div class="col-md-8 col-xl-9 p-3 pl-md-0">
-            <h5 class="mt-0 mb-0 font-weight-normal" style="color: #808D7C;">
+            <h5 class="pub-item-title mt-0 mb-0 font-weight-normal">
               {% if project_link %}
                 <a href="{{ project_link }}" class="item_link" target="_blank">{{ item.title }}</a>
               {% else %}
@@ -80,11 +46,11 @@
 </div>
 
 <div class="row no-gutters d-md-none {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray {% if include.first %}rounded-top{% endif %} {% if include.last %}rounded-bottom{% endif %} {% if item.cover %}lazy{% endif %} {% if item.selected and page.path contains 'publications' %}selected-publication{% endif %}" data-src="{{ item.cover | relative_url }}">
-    <div class="w-100" style="background-color: rgba(255,255,255,0.9);">
+    <div class="w-100 pub-mobile-overlay">
         <div class="d-flex align-items-start flex-column py-3 px-4 publication-container">
             <div class="mb-auto"></div>
             <div>
-                <h5 class="mt-0 mb-0 font-weight-normal" style="color: #808D7C;">
+                <h5 class="pub-item-title mt-0 mb-0 font-weight-normal">
                   {% if project_link %}
                     <a href="{{ project_link }}" class="item_link" target="_blank">{{ item.title }}</a>
                   {% else %}
@@ -92,7 +58,7 @@
                   {% endif %}
                 </h5>
                 <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
-                <p class="mt-0 mb-0 small>{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}</p>
+                <p class="mt-0 mb-0 small">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}</p>
                 <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
                 
                 <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">

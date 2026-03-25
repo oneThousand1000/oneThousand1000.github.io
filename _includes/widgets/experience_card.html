@@ -1,204 +1,89 @@
-<style>
- 
-    .custom-radius {
-        border-radius: 15px;
-    }
-
-    .institution-name {
-        color: #48A6A7;
-        font-weight: bold;
-    }
-
-    .timeline {
-        position: relative;
-        margin: 0;
-        --timeline-date-width: 8rem;
-        --timeline-date-gap: 0.6rem;
-        --timeline-content-gap: 1.4rem;
-        --timeline-axis-x: calc(var(--timeline-date-width) + (var(--timeline-date-gap) / 2));
-    }
-
-    .timeline::before {
-        content: "";
-        position: absolute;
-        left: var(--timeline-axis-x);
-        top: 0.4rem;
-        bottom: 0.4rem;
-        width: 2px;
-        background: #e9ecef;
-    }
-
-    .timeline-item {
-        position: relative;
-        display: flex;
-        align-items: flex-start;
-    }
-
-    .timeline-item::before {
-        content: "";
-        position: absolute;
-        left: calc(var(--timeline-axis-x) - 0.3rem);
-        top: 0.45rem;
-        width: 0.6rem;
-        height: 0.6rem;
-        border-radius: 50%;
-        background: #48A6A7;
-        border: 2px solid #ffffff;
-        box-shadow: 0 0 0 2px #48A6A7;
-    }
-
-    .timeline-date {
-        width: var(--timeline-date-width);
-        padding-right: var(--timeline-date-gap);
-        display: flex;
-        justify-content: flex-end;
-        text-align: right;
-        color: #6c757d;
-        font-size: 0.7rem;
-        white-space: nowrap;
-    }
-
-    .timeline-content {
-        flex: 1;
-        padding-left: var(--timeline-content-gap);
-    }
-
-    @media (max-width: 576px) {
-        .timeline {
-            --timeline-date-width: 0;
-            --timeline-date-gap: 0;
-            --timeline-content-gap: 0.9rem;
-        }
-
-        .timeline::before {
-            left: 0.3rem;
-        }
-
-        .timeline-item {
-            flex-direction: column;
-            padding-left: 0.9rem;
-        }
-
-        .timeline-item::before {
-            left: 0;
-            top: 0.35rem;
-        }
-
-        .timeline-date {
-            width: auto;
-            padding-right: 0;
-            justify-content: flex-start;
-            text-align: left;
-            font-size: 0.65rem;
-            margin-bottom: 0.2rem;
-        }
-
-        .timeline-content {
-            padding-left: 0;
-        }
-
-        .timeline-content img {
-            height: 20px;
-        }
-
-        .timeline-content .ml-2.d-flex {
-            flex-wrap: wrap;
-            gap: 0.2rem;
-            margin-left: 0.4rem;
-        }
-    }
-    </style>
-
 {% if site.data.profile.experience %}
 <div class="row mt-3">
     <div class="col">
-        <div class="card border-0 shadow-sm bg-white custom-radius">
+        <div class="card border-0 shadow-sm bg-white">
             <div class="card-body p-4">
-                <div class="mx-2 my-1">
-                    <h5>Experience</h5>
-                    <ul class="list-unstyled mb-1 timeline">
-                        {% for item in site.data.profile.experience %}
-                        <li class="media mb-2 timeline-item">
-                            <div class="timeline-date"><em>{{ item.date }}</em></div>
-                            <div class="media-body timeline-content">
-                                <div class="d-flex align-items-center">
-                                    <div class="institution-name">{{ item.name }}</div>
-                                    <div class="ml-2 d-flex align-items-center">
-                                        <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" style="height: 24px;" class="mr-1">
-                                        {% if item.logo2 %}
-                                        <img src="{{ item.logo2 | relative_url }}" alt="{{ item.name }} 2" style="height: 24px;">
-                                        {% endif %}
+                <div class="row" data-masonry='{"percentPosition": true }'>
+                    {% if site.data.profile.education %}
+                    <div class="col-lg-6">
+                        <div class="mx-2 my-1">
+                            <h6>Education</h6>
+                            <ul class="list-unstyled mb-1">
+                                {% for item in site.data.profile.education %}
+                                <li class="media mb-1">
+                                    <div class="media-body">
+                                        <div class="d-flex align-items-center">
+                                            <div>{{ item.name }}</div>
+                                            <div class="ml-2 d-flex align-items-center">
+                                                <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" class="experience-inline-logo mr-1">
+                                                {% if item.logo2 %}
+                                                <img src="{{ item.logo2 | relative_url }}" alt="{{ item.name }} 2" class="experience-inline-logo">
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <div class="small">{{ item.dept }}</div>
+                                        <div class="small d-flex">
+                                            <div>{{ item.position }}</div>
+                                            <div class="mt-auto ml-auto no-break"><em>{{ item.date }}</em></div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="small">{{ item.dept }}</div>
-                                <div class="small d-flex">
-                                    <div>{{ item.position }}</div>
-                                </div>
-                            </div>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{% endif %}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
 
-{% if site.data.profile.education %}
-<div class="row mt-3">
-    <div class="col">
-        <div class="card border-0 shadow-sm bg-white custom-radius">
-            <div class="card-body p-4">
-                <div class="mx-2 my-1">
-                    <h5>Education</h5>
-                    <ul class="list-unstyled mb-1 timeline">
-                        {% for item in site.data.profile.education %}
-                        <li class="media mb-2 timeline-item">
-                            <div class="timeline-date"><em>{{ item.date }}</em></div>
-                            <div class="media-body timeline-content">
-                                <div class="d-flex align-items-center">
-                                    <div class="institution-name">{{ item.name }}</div>
-                                    <div class="ml-2 d-flex align-items-center">
-                                        <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" style="height: 24px;" class="mr-1">
-                                        {% if item.logo2 %}
-                                        <img src="{{ item.logo2 | relative_url }}" alt="{{ item.name }} 2" style="height: 24px;">
-                                        {% endif %}
+                    {% if site.data.profile.experience %}
+                    <div class="col-lg-6">
+                        <div class="mx-2 my-1">
+                            <h6>Experience</h6>
+                            <ul class="list-unstyled mb-1">
+                                {% for item in site.data.profile.experience %}
+                                <li class="media mb-1">
+                                    <div class="media-body">
+                                        <div class="d-flex align-items-center">
+                                            <div>{{ item.name }}</div>
+                                            <div class="ml-2 d-flex align-items-center">
+                                                <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" class="experience-inline-logo mr-1">
+                                                {% if item.logo2 %}
+                                                <img src="{{ item.logo2 | relative_url }}" alt="{{ item.name }} 2" class="experience-inline-logo">
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <div class="small">{{ item.dept }}</div>
+                                        <div class="small d-flex">
+                                            <div>{{ item.position }}</div>
+                                            <div class="mt-auto ml-auto no-break"><em>{{ item.date }}</em></div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="small">{{ item.dept }}</div>
-                                <div class="small d-flex">
-                                    <div>{{ item.position }}</div>
-                                </div>
-                            </div>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{% endif %}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
 
-{% if site.data.profile.awards %}
-<div class="row mt-3">
-    <div class="col">
-        <div class="card border-0 shadow-sm bg-white custom-radius">
-            <div class="card-body p-4">
-                <div class="mx-2 my-1">
-                    <h5>🏆 Honors & Awards</h5>
-                    <ul class="list small pl-3 mb-1">
-                        {% for item in site.data.profile.awards %}
-                        <li class="mb-2">
-                            <div class="d-flex">
-                                <div class="institution-name">{{ item.name }}</div>
-                                <div class="ml-auto mt-auto no-break"><em>{{ item.date }}</em></div>
-                            </div>
-                        </li>
-                        {% endfor %}
-                    </ul>
+                    {% if site.data.profile.awards %}
+                    <div class="col-lg-6">
+                        <div class="mx-2 my-1">
+                            <h6>Honors & Awards</h6>
+                            <ul class="list small pl-3 mb-1">
+                                {% for item in site.data.profile.awards %}
+                                <li>
+                                    <div class="d-flex">
+                                        <div>{{ item.name }}</div>
+                                        <div class="ml-auto mt-auto no-break"><em>{{ item.date }}</em></div>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
+
                 </div>
+
             </div>
         </div>
     </div>
