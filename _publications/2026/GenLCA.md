@@ -25,6 +25,6 @@ authors:
 links: 
   Arxiv: https://arxiv.org/abs/2604.07273 
   Video: https://youtu.be/m02RMzXold4 
-  Project: https://arxiv.org/abs/2604.07273 
+  Project: https://onethousandwu.com/GenLCA-Page
   Supplementary: https://drive.google.com/file/d/1OaGf1Cq-g1jNgrQJ4Knqcy9XbUvDVoMA/view?usp=sharing 
 --- 
