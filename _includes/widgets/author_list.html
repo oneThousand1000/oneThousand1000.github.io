@@ -8,9 +8,9 @@
         {%- assign key = _key | split: "*" | first -%}
         {%- assign mark = "*" -%}
         {%- assign has_eq_contrib = true -%}
-    {%- elsif last_char == "#" -%}
-        {%- assign key = _key | split: "#" | first -%}
-        {%- assign mark = '<sup>#</sup>' -%}
+    {%- elsif last_char == "†" -%}
+        {%- assign key = _key | split: "†" | first -%}
+        {%- assign mark = '<sup>†</sup>' -%}
         {%- assign has_corresponding = true -%}
     {%- else -%}
         {%- assign key = _key -%}
@@ -41,14 +41,14 @@
 
 {%- endfor -%}.
 
-{%- if has_eq_contrib or has_corresponding %}
+{%- if has_eq_contrib %}
 <mark>(
     {%- if has_eq_contrib -%}
         * <i> equal contribution</i>
     {%- endif -%}
-    {%- if has_corresponding -%}
+    <!-- {%- if has_corresponding -%}
         {%- if has_eq_contrib -%}, {% endif -%}
-        <sup>#</sup> <i> corresponding author</i>
-    {%- endif -%}
+        <sup>†</sup> <i> corresponding author</i>
+    {%- endif -%} -->
 )</mark>
 {%- endif -%}

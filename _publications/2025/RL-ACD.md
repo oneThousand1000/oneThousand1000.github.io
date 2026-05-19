@@ -18,8 +18,8 @@ authors:
   - Yun Zeng
   - Xiangjun Tang
   - Yiqian Wu
-  - Xiaogang Jin
-  - Xifeng Gao
+  - Xiaogang Jin†
+  - Xifeng Gao†
 links: 
   Paper: https://dl.acm.org/doi/10.1145/3763270
 ---

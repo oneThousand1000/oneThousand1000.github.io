@@ -20,7 +20,7 @@ authors:
   - Siyu Tang
   - Zhebin Zhang
   - Chen Li
-  - Xiaogang Jin
+  - Xiaogang Jin†
 links:
   Paper: https://dl.acm.org/doi/10.1145/3658162
   Arxiv: https://arxiv.org/abs/2404.10394

@@ -14,7 +14,7 @@ cover:          /assets/images/publications/hairmapper.png
 authors:
   - Yiqian Wu
   - Yongliang Yang
-  - Xiaogang Jin
+  - Xiaogang Jin†
 links:
   Paper: https://openaccess.thecvf.com/content/CVPR2022/html/Wu_HairMapper_Removing_Hair_From_Portraits_Using_GANs_CVPR_2022_paper.html
   Video: https://youtu.be/UNtgpphVR2w

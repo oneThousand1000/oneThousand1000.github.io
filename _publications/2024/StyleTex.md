@@ -13,13 +13,13 @@ abstract: >-
 
 cover:          /assets/images/publications/styletex.png
 authors:
-  - Zhiyu Xie
-  - Yuqing Zhang
+  - Zhiyu Xie*
+  - Yuqing Zhang*
   - Xiangjun Tang
   - Yiqian Wu
   - Dehan Chen
   - Gongsheng Li
-  - Xiaogang Jin
+  - Xiaogang Jin†
 links:
   Paper: https://dl.acm.org/doi/10.1145/3687931
   Arxiv: https://arxiv.org/abs/2411.00399

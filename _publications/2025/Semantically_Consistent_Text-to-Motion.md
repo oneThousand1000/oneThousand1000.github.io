@@ -23,7 +23,7 @@ authors:
   - Yuchen Liao
   - Yiqian Wu
   - Chen Liu
-  - Xiaogang Jin
+  - Xiaogang Jin†
 links:
   Paper: https://dl.acm.org/doi/10.1145/3721238.3730641 
   Project: https://fivezerojun.github.io/stylization.github.io/

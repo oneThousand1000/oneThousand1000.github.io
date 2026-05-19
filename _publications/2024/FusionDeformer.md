@@ -20,7 +20,7 @@ authors:
   - Yang Zhang
   - Zhebin Zhang
   - Chen Li
-  - Xiaogang Jin
+  - Xiaogang Jin†
 links:
   Paper: http://www.cad.zju.edu.cn/home/jin/papers/FusionDeformer2024.pdf
   Code: https://github.com/xh38/FusionDeformer 

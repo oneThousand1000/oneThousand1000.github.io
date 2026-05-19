@@ -17,7 +17,7 @@ authors:
   - Hongli Liu
   - Lingqi Yan
   - Yiqian Wu
-  - Xiaogang Jin
+  - Xiaogang Jin†
 links:
   Paper: https://dl.acm.org/doi/10.1145/3588432.3591493
   Project: http://www.cad.zju.edu.cn/home/jin/sig20231/SigMRPNN2023.htm

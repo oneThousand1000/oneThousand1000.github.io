@@ -17,7 +17,7 @@ authors:
   - Xiangjun Tang
   - Yue Shangguan
   - Hongbo Fu
-  - Xiaogang Jin
+  - Xiaogang Jin†
 links:
   Paper: https://ieeexplore.ieee.org/document/11072208
   Project: https://onethousandwu.com/3DPortraitGAN.github.io/

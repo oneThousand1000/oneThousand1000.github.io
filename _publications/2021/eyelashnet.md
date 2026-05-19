@@ -18,7 +18,7 @@ authors:
   - Zhaorui Zhang
   - Yiqian Wu
   - Luyuan Wang
-  - Xiaogang Jin
+  - Xiaogang Jin†
   - Xinwei Jiang
   - Yongliang Yang
   - Tianjia Shao

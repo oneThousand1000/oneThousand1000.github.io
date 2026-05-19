@@ -21,8 +21,8 @@ authors:
   - Ding Liang
   - Yingtian Liu
   - Yuanchen Guo
-  - Yanpei Cao
-  - Xiaogang Jin
+  - Yanpei Cao†
+  - Xiaogang Jin†
 links: 
   Project: https://xh38.github.io/LegoACE/
   Paper: https://dl.acm.org/doi/10.1145/3757377.3763881

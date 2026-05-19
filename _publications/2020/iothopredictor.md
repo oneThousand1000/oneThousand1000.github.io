@@ -19,7 +19,7 @@ authors:
   - Xiang Li
   - Kun Zhou
   - Hongbo Fu
-  - Youyi Zheng
+  - Youyi Zheng†
 links:
   Paper: https://dl.acm.org/doi/10.1145/3414685.3417771
   Code: https://github.com/Lingchen-chen/iOrthopredictor

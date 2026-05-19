@@ -20,8 +20,8 @@ authors:
   - Sirui Lin
   - Yuqing Wang
   - Ding Liang
-  - Yuan-Chen Guo
-  - Xiaogang Jin
+  - Yuan-Chen Guo† 
+  - Xiaogang Jin† 
 links: 
   Video: https://www.youtube.com/watch?v=GFDOeS_vmuI
   Code: https://github.com/vast-enterprise/PixTex

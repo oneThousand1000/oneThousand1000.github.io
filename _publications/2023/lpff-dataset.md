@@ -16,7 +16,7 @@ authors:
   - Yiqian Wu
   - Jing Zhang
   - Hongbo Fu
-  - Xiaogang Jin
+  - Xiaogang Jin†
 links:
   Paper: https://openaccess.thecvf.com/content/ICCV2023/html/Wu_LPFF_A_Portrait_Dataset_for_Face_Generators_Across_Large_Poses_ICCV_2023_paper.html
   Arxiv: https://arxiv.org/abs/2303.14407

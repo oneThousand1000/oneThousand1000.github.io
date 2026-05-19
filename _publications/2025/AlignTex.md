@@ -18,7 +18,7 @@ authors:
   - Sirui Lin
   - Xiang Li
   - Xifeng Gao
-  - Xiaogang Jin
+  - Xiaogang Jin†
 links: 
   Paper: https://dl.acm.org/doi/abs/10.1145/3731158
 ---

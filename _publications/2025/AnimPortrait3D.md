@@ -15,7 +15,7 @@ cover:          /assets/images/publications/AnimPortrait3D.jpg
 authors:
   - Yiqian Wu
   - Malte Prinzler
-  - Xiaogang Jin
+  - Xiaogang Jin†
   - Siyu Tang
 links:
   Paper: https://dl.acm.org/doi/abs/10.1145/3721238.3730680 

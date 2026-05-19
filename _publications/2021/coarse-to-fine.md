@@ -16,7 +16,7 @@ authors:
   - Yiqian Wu
   - Yongliang Yang
   - Qinjie Xiao
-  - Xiaogang Jin
+  - Xiaogang Jin†
 links:
   Paper: https://dl.acm.org/doi/10.1145/3450626.3459814
   Video: https://youtu.be/1aYPceNkwIQ

@@ -22,7 +22,7 @@ authors:
   - Xu Gong
   - Yuchen Liao
   - Qilong Kou
-  - Xiaogang Jin
+  - Xiaogang Jin†
 links:
   Paper: https://dl.acm.org/doi/10.1145/3680528.3687609
   Arxiv: https://arxiv.org/abs/2409.05387
