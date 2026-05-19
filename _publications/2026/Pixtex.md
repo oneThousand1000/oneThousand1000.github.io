@@ -14,13 +14,15 @@ abstract: >-
 cover:          /assets/images/publications/pixtex.jpg
 authors:
   - Yuqing Zhang
-  - Yuan-Chen Guo
+  - Yan-Pei Cao
   - Hao Xu
   - Yiqian Wu
   - Sirui Lin
   - Yuqing Wang
   - Ding Liang
-  - Yan-Pei Cao
+  - Yuan-Chen Guo
   - Xiaogang Jin
 links: 
+  Video: https://www.youtube.com/watch?v=GFDOeS_vmuI
+  Code: https://github.com/vast-enterprise/PixTex
 --- 
